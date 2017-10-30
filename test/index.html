@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+        <!--<link rel="stylesheet" type="text/css" href="dist/app/css/app.css" />-->
+
+        <title>接口测试</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+
+        <script src="vendor/jquery/2.1.0/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="vendor/vue/vue.js" type="text/javascript" charset="utf-8"></script>
+        <div class="container-fluid" id="app1">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="http">域名：</label>
+                        <input type="text" id="http" class="form-control" v-model="captchaUrl" placeholder="url" />
+                    </div>
+                    <div class="form-group">
+                        <label for="url">地址：</label>
+                        <input type="text" id="url" class="form-control" :value="captchaUrl+'/index.php/UserV0_1/Test/test'" placeholder="url" />
+                    </div>
+
+                    <div class="checkbox">
+                        <label for="istest">
+                            <input type="checkbox" v-on:click="upChecked" id="istest" v-model="checked" /> 是否输出测试信息
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <button id="test" class="btn btn-success">请求接口</button>
+                            <img id="captcha" :src="captchaUrl+'/index.php/UserV0_1/Public/captcha'" />
+
+                        </div>
+                    </div>
+
+                    <textarea class="form-control" rows="20" id="postJson" placeholder="在此输入JSON参数"></textarea>
+
+                </div>
+                <div class="col-sm-6">
+
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <button id="removeAll" class="btn btn-danger">清空 </button>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="fk" id="resultBox"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <script src="vendor/vue/vue.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+            var app = new Vue({
+                el: '#app1',
+                data: {
+                    checked: getChecked(),
+                    captchaUrl: 'http://192.168.1.166'
+                },
+                methods: {
+                    upChecked: function() {
+                        localStorage.checked = app.checked;
+                    }
+                }
+            });
+
+            function getChecked() {
+
+                if(localStorage.checked == null) {
+                    localStorage.checked = 'true';
+                    return true;
+                }
+                if(localStorage.checked === 'true') {
+                    return true;
+                }
+                if(localStorage.checked === 'false') {
+                    return false;
+                }
+
+            }
+
+            $(function() {
+
+                $(document).on('click', '#test', function() {
+
+                    var url = $('#url').val() + '/debug/' + app.checked;
+                    var postJson = $('#postJson').val();
+                    if(postJson === '') {
+
+                        $.get(url, function(result) {
+                            $('#resultBox').html(result);
+                            update();
+                        });
+
+                    } else {
+
+                        $.post(url, JSON.parse(postJson), function(result) {
+                            $('#resultBox').html(result);
+                            update();
+                        });
+
+                    }
+
+                })
+                $(document).on('click', '#removeAll', function() {
+                    $('#resultBox').html('');
+                })
+                $(document).on('click', '#captcha',
+                    function() {
+                        update()
+                    })
+
+                function update() {
+                    $('#captcha').attr('src', 'http://192.168.1.166/index.php/UserV0_1/Public/captcha/' + Math.random());
+                }
+            });
+        </script>
+    </body>
+
+</html>

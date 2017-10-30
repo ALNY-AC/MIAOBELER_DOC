@@ -31,7 +31,7 @@
              ::-webkit-scrollbar-thumb {
                 border-radius: 10px;
                 -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-                background-color: #337ab7;
+                background-color: #ddd;
             }
             
             .code {
@@ -91,16 +91,19 @@
     </head>
 
     <body>
-        <div class="box"></div>
 
-        <div class="lfet"></div>
+        <div class="box "></div>
 
-        <script src="vendor/jquery/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
-        <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="vendor/vue/vue.js" type="text/javascript" charset="utf-8"></script>
-        <script src="vendor/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+        <div class="lfet ">
+            <a target="_blank" href="test/index.html" type="button" class="btn btn-danger ">打开接口测试工具</a>
+        </div>
 
-        <script type="text/javascript">
+        <script src="vendor/jquery/jquery-2.1.0.js " type="text/javascript " charset="utf-8 "></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js " type="text/javascript " charset="utf-8 "></script>
+        <script src="vendor/vue/vue.js " type="text/javascript " charset="utf-8 "></script>
+        <script src="vendor/layer/layer.js " type="text/javascript " charset="utf-8 "></script>
+
+        <script type="text/javascript ">
             $.get('doc.html', function(date) {
                 $('.box').html(date);
 
@@ -108,7 +111,11 @@
 
             });
             var init = function() {
+
+                //                          <input type="text " class="form-control " value=" ">
+
                 $('h2,h3').each(function(index) {
+
                     var id = 'nav' + index;
                     var em = $('<div/>').text($(this).text());
                     var a = $('<a/>').attr('href', '#' + id).addClass('item-a');
@@ -124,6 +131,13 @@
                     if(this.tagName == 'H3') {
                         em.addClass('itme item-h3');
                         $(this).parents('.panel').attr('id', id);
+
+                        var td = $(this).parents('.panel').find('.table tr:first td:last');
+
+                        var url = td.text();
+                        td.text('');
+                        $('<input type="text " class="form-control ">').val(url).appendTo(td);
+
                     }
 
                 });
@@ -137,20 +151,6 @@
 
                 });
             }
-
-            //           panel-primary
-
-            //边缘弹出
-            //          layer.open({
-            //              type: 1,
-            //              title: '导航',
-            //              area: '250px',
-            //              maxHeight: '80%',
-            //              offset: 'r' //具体配置参考：offset参数项
-            //                  ,
-            //              content: '',
-            //              shade: 0 //不显示遮罩
-            //          });
         </script>
     </body>
 
