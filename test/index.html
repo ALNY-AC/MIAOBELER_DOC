@@ -29,7 +29,10 @@
                     </div>
                     <div class="form-group">
                         <label for="url">地址：</label>
-                        <input type="text" id="url" class="form-control" :value="captchaUrl+'/index.php/UserV0_1/Test/test'" placeholder="url" />
+                        <input type="text" id="url" class="form-control" v-model="paUrl" placeholder="url" />
+                    </div>
+                    <div class="form-group">
+                        <label for="url">{{captchaUrl+'/'+paUrl}}</label>
                     </div>
 
                     <div class="checkbox">
@@ -79,7 +82,8 @@
                 el: '#app1',
                 data: {
                     checked: getChecked(),
-                    captchaUrl: 'http://192.168.1.166'
+                    captchaUrl: 'http://192.168.1.166',
+                    paUrl: 'index.php/UserV0_1/Test/test'
                 },
                 methods: {
                     upChecked: function() {
@@ -107,7 +111,7 @@
 
                 $(document).on('click', '#test', function() {
 
-                    var url = $('#url').val() + '/debug/' + app.checked;
+                    var url = app.captchaUrl + '/' + app.paUrl + '/debug/' + app.checked;
                     var postJson = $('#postJson').val();
                     if(postJson === '') {
 
