@@ -1,0 +1,1218 @@
+<div class="container">
+
+    <h1>MIAOBELER 接口文档</h1>
+    <hr />
+    <h2>首页相关</h2>
+
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">轮播图接口</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Carousel/get</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+输出示例：
+{
+    "img1":"img/img1",
+    "img2":"img/img2",
+    "img3":"img/img3",
+    "img4":"img/img4"
+}</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">获得导航条</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Nav/get</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+输出导航条信息
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">商品类别接口</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Class/getClassList</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+请用工具查看示例输出
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>用户相关——购物袋</h2>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">向购物袋中添加商品</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/ShoppingBag/addBag</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>post</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+需要传递的参数：
+{
+    "num": 1,//商品数量
+    "goods_id": "abcdefg"//商品id
+}
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">修改购物袋中商品数量</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/ShoppingBag/saveBagNum</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>post</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+需要传递的参数：
+{
+    "num": 1,//商品数量
+    "goods_id": "abcdefg"//商品id
+}
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">从购物袋中删除一个商品</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/ShoppingBag/removeBag</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>post</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+需要传递的参数：
+{
+    "bag_id": "购物袋的id"
+}
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">查找用户的购物袋列表</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/ShoppingBag/showList</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>post</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+直接返回用户的购物袋参数
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>用户相关——收藏</h2>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">添加/删除用户收藏</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Collect/toggle</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+需要传递的参数：
+{
+    "goods_id": "想要收藏的商品的id"
+}
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">显示收藏列表</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Collect/showList</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+需要传递的参数：
+{
+    "goods_id": "想要收藏的商品的id"
+}
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>用户相关——订单管理</h2>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">使用要求</h3>
+                </div>
+                <div class="panel-body">
+                    <p>1、先调用
+                        <span class="label label-success">订单添加接口</span>添加订单
+                    </p>
+                    <p>2、如果用户选择立刻支付，在客户端支付完成后，就可以调用
+                        <span class="label label-success">支付接口</span>来更改订单状态为已支付待发货
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">添加订单</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Order/add</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>post</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+需要传递的参数：
+{
+    "token": "0656ae5d3ef7202248a030194008e0be",//敏感操作，必须传递令牌
+    "num": "1",//用户选择的商品数量
+    "goods_id": "abcdefg",//用户购买的商品id
+}
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">支付接口</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Order/payment</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>post</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+需要传递的参数：
+{
+    "token": "0656ae5d3ef7202248a030194008e0be",//敏感操作，必须传递令牌
+    "num": "1",//用户选择的商品数量
+    "goods_id": "abcdefg",//用户购买的商品id
+}
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">取消订单</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Order/remove</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>post</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+只有当订单未支付的时候才能取消，后台会判断，注意返回信息。                                
+需要传递的参数：
+{
+    "token": "0656ae5d3ef7202248a030194008e0be",//敏感操作，必须传递令牌
+    "order_id": "abcdefg",//订单号
+}
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">获取单个订单</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Order/getOne</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+需要传递的参数：
+{
+    "token": "0656ae5d3ef7202248a030194008e0be",//敏感操作，必须传递令牌
+    "order_id": "abcdefg",//订单号
+}
+返回此订单的数据
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">获得订单列表</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Order/showList</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+    "token": "0656ae5d3ef7202248a030194008e0be",//敏感操作，必须传递令牌
+}
+返回此用户所有的订单信息
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">申请售后</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Order/customerService</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>post</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+        "token": "0656ae5d3ef7202248a030194008e0be",
+        "order_id": "传递想要申请的售后订单号"
+}
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>用户相关——动态</h2>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">发布动态</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Dynamic/add</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>post</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+        "token": "0656ae5d3ef7202248a030194008e0be",
+        "title": "动态标题",
+        "content": "动态内容"
+}
+
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">转发动态</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Dynamic/forward</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>post</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+        "token": "0656ae5d3ef7202248a030194008e0be",
+        "forward_user_id": "想要转发的动态的id"
+}
+
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">回复动态</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Dynamic/reply</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>post</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+        "token": "0656ae5d3ef7202248a030194008e0be",
+        "dynamic_id": "想要回复的id"
+        "content": "回复的内容"
+}
+
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">获得单个动态和此动态的评论</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Dynamic/getOne</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+        "token": "0656ae5d3ef7202248a030194008e0be",
+        "dynamic_id": "想要获得的动态id"
+}
+
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">获得动态列表</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Dynamic/getList</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+        "token": "0656ae5d3ef7202248a030194008e0be",
+}
+
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">上传图片接口</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Dynamic/upImg</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>post</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+        "token": "0656ae5d3ef7202248a030194008e0be",
+        "dynamic_img":"要上传的文件"
+}
+
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>商品相关——搜索</h2>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">通过关键字搜索</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Goods/queryGoods</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：（数组中就是关键字列表）
+{
+    "goods_name_list": [
+        "%价%",
+        "%惠%"
+    ]
+}
+
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>商品相关——获得信息</h2>
+
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">获得现价</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Goods/getGoddsPrice</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+    "goods_id": "商品的id"
+}
+
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">获得原价</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Goods/getGoddsStrPrice</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+    "goods_id": "商品的id"
+}
+
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">获得积分</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Goods/getGoodsIntegral</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+    "goods_id": "商品的id"
+}
+
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">获得商品的单独信息，不包括详情页</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Goods/getGoods</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+    "goods_id": "商品的id"
+}
+
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>商品相关——详情页</h2>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">获得商品的单独信息，不包括详情页</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/GoodsInfo/getGoodsInfo</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+    "goods_id": "商品的id"
+}
+
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>分类展示</h2>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">获得分类</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/GoodsInfo/getGoodsInfo</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>get</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+    "goods_id": "商品的id"
+}
+
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>用户反馈</h2>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">提交反馈</h3>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>url</td>
+                        <td>/UserV0_1/Opinion/add</td>
+                    </tr>
+                    <tr>
+                        <td>格式</td>
+                        <td>json</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP请求方式</td>
+                        <td>post</td>
+                    </tr>
+                    <tr>
+                        <td>权限</td>
+                        <td>private</td>
+                    </tr>
+                </table>
+                <div class="panel-footer code">
+
+                    <pre>
+                    
+需要传递的参数：
+{
+    "goods_id": "商品的id"
+    "type": "反馈的类别"
+    "content": "反馈信息"
+}
+
+</pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
