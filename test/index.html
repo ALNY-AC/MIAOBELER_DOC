@@ -10,9 +10,7 @@
 
         <title>接口测试</title>
 
-        <style type="text/css">
-
-        </style>
+        <style type="text/css"></style>
     </head>
 
     <body>
@@ -82,7 +80,7 @@
                 el: '#app1',
                 data: {
                     checked: getChecked(),
-                    captchaUrl: 'http://192.168.1.196/index.php',
+                    captchaUrl: 'http://192.168.1.196/index.php/',
                     paUrl: '/UserV0_1/Test/test'
                 },
                 methods: {
@@ -111,7 +109,7 @@
 
                 $(document).on('click', '#test', function() {
 
-                    var url = app.captchaUrl + 'index.php/' + app.paUrl + '/debug/' + app.checked;
+                    var url = app.captchaUrl + app.paUrl + '/debug/' + app.checked;
                     var postJson = $('#postJson').val();
                     if(postJson === '') {
 
